@@ -1,6 +1,8 @@
 local shape = {}
 shape.__index = shape
 
+local gameController = require("src/gameController")
+
 local activeShapes = {}
 local activeShadows = {}
 
@@ -63,6 +65,11 @@ end
 
 function shape.init(shapes, shapeSize)
     createShapes(shapes, shapeSize)
+end
+
+function shape.reset()
+    activeShapes = {}
+    activeShadows = {}
 end
 
 function shape.new(x, y, shapeName, shadow)
@@ -144,6 +151,8 @@ function shape.mousereleased(x, y)
                 instance.matched = true
                 instance.x = shadow.x
                 instance.y = shadow.y
+
+                gameController:addMatch()
             else
                 instance.x = instance.startX
                 instance.y = instance.startY

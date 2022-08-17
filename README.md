@@ -6,13 +6,13 @@ simple drag and drop mechanics
 - drag and drop mechanics
 - random creation of shapes and shadows
 - `rect - rect` and `rect - point` interception
-
-
-obs.: for the full version, containing a game controller with win state and reset actions, go to the `full-game` branch
+- game controller with `playing` and `win` states
+- reset game action
+- text render
 
 
 ## overview
-https://user-images.githubusercontent.com/5198967/185012659-e61a9b38-1743-4fae-af46-ce802c550946.mov
+https://user-images.githubusercontent.com/5198967/185014200-4972505a-3363-4d19-9e8c-0e24615172f3.mov
 
 
 ## how to run
